@@ -1,43 +1,44 @@
-<div class="cotainer text-center">
-
-    <div class="row m-3">
-      <div class="col">
-        <b>Bulbasaur 001</b>
+<form></form>
+<div class="conteudo {{ pokemon.types[0].type.name }}">
+  <div class="button">
+    <div class="voltar">
+      <button (click)="Voltar()"><i class="bi bi-arrow-left-short"></i>Voltar</button>
     </div>
+    <div class="proximo">
+      <button (click)="Proximo()">Próximo <i class="bi bi-arrow-right-short"></i></button>
     </div>
-     <div class="row m-3">
-        <div class="col">
-          <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
-            width="200px"
-        />
+  </div>
+  <div class="content-pokemon">
+    <h1 class="text-center text-capitalize mt-2">{{pokemon.name}}</h1>
+    <div class="id">
+      <p>#{{pokemon.id | number:'3.0-4'}}</p>
+    </div>
+    <div class="imagem">
+      <img src="{{getPokemonPhoto()}}" alt="{{pokemon.name}} image">
+    </div>
+    <div class="info">
+      <div class="height">
+        <p>Altura:{{height | number:'.1-1'}} M&nbsp;</p>
+        <br>
+        <p>Peso: {{weight  | number:'.1-1'}} Kg</p>
       </div>
-  </div>
-
-  <div class="row m-3">
-    <div class="col">
-      <b>Ivysuar 002</b>
-  </div>
-  </div>
-   <div class="row m-3">
-      <div class="col">
-        <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png"
-          width="200px"
-      />
     </div>
-</div>
-
-<div class="row m-3">
-  <div class="col">
-    <b>Venosaur 003</b>
-</div>
-</div>
- <div class="row m-3">
-    <div class="col">
-      <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png"
-        width="200px"
-    />
+    <div>
+      <ul class="type-list">
+        <li class="type {{type.type.name}} type" *ngFor="let type of pokemon.types">
+          {{ type.type.name }}
+        </li>
+      </ul>
+    </div>
   </div>
+    <ul>
+      <li *ngFor="let status of pokemon.stats" class="status-poke">
+        <p class="name-status text-center text-capitalize">{{status.stat.name}}&nbsp;</p>
+        <div class="ataques">
+          <p>{{status.base_stat}}&nbsp;</p>
+          <progress class="progress {{ pokemon.types[0].type.name }}" max="150"
+            value="{{ status.base_stat }}">&nbsp;</progress>
+        </div>
+      </li>
+    </ul>
 </div>
-
-
-
