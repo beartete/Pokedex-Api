@@ -1,4 +1,4 @@
-<form></form>
+
 <div class="conteudo {{ pokemon.types[0].type.name }}">
   <div class="button">
     <div class="voltar">
@@ -18,18 +18,18 @@
     </div>
     <div class="info">
       <div class="height">
-        <p>Altura:{{height | number:'.1-1'}} M&nbsp;</p>
-        <br>
-        <p>Peso: {{weight  | number:'.1-1'}} Kg</p>
+        Altura:{{height | number:'.1-1'}} M&nbsp;
+        Peso: {{weight  | number:'.1-1'}} Kg
       </div>
     </div>
     <div>
-      <ul class="type-list">
-        <li class="type {{type.type.name}} type" *ngFor="let type of pokemon.types">
-          {{ type.type.name }}
-        </li>
-      </ul>
+      <div class="type-list">
+        <div class="type-box" *ngFor="let type of pokemon.types">
+          <p class="type {{type.type.name}}">{{type.type.name}}</p>
+        </div>
+      </div>
     </div>
+     
   </div>
     <ul>
       <li *ngFor="let status of pokemon.stats" class="status-poke">

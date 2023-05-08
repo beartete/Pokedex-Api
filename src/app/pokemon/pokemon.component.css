@@ -44,6 +44,7 @@
   .proximo i {
     font-size: 18px;
     margin-right: 5px;
+    width: 100px;
   }
   
   /* estilo do nome do pokemon */
@@ -51,6 +52,7 @@
     font-size: 32px;
     font-weight: 700;
     margin: 0;
+    width: 100px;
   }
   
   /* estilo do número do pokemon */
@@ -74,9 +76,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-  }
-  
-  .info p {
     color: #777;
     font-size: 14px;
     margin: 0;
@@ -126,6 +125,29 @@
   }
   
   /* estilos para cada tipo de pokemon */
+  .type-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .type-box {
+    background-color: #6b6969;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .type {
+    margin: 0;
+  }
+  
   .bugtype {
     background-color: #8cb230;
   }
@@ -155,5 +177,47 @@
   }
   
   .flyingtype {
-    background-color: #748fc9
+    background-color: #748fc9;
   }
+  
+  .ghosttype {
+    background-color: #556aae;
+  }
+  
+  .grasstype {
+    background-color: #62b957;
+  }
+  
+  .groundtype {
+    background-color: #dd7748;
+  }
+  
+  .icetype {
+    background-color: #61cec0;
+  }
+  
+  .normaltype {
+    background-color: #9da0aa;
+  }
+  
+  .poison-type {
+    background-color: #a552cc;
+  }
+  
+  .psychictype {
+    background-color: #ea5d60;
+  }
+  
+  .rocktype {
+    background-color: #baab82;
+  }
+  
+  .steeltype {
+    background-color: #417d9a;
+  }
+  
+  .watertype {
+    background-color: #4a90da;
+  }
+
+
